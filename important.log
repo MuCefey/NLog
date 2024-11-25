@@ -1,0 +1,33 @@
+2024-11-25 08:54:38.3125|ERROR|Log.Form1|Ошибка при подключении к базе данных.|System.Data.SqlClient.SqlException (0x80131904): При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в Log.Form1.btnDatabase_Click(Object sender, EventArgs e) в C:\Users\nkuby\source\repos\Log\Log\Form1.cs:строка 32
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number: 2, State: 0, Class: 20
+2024-11-25 08:54:45.6922|ERROR|Log.Form1|Переполнение в расчете.|System.OverflowException: Переполнение в результате выполнения арифметической операции.
+   в Log.Form1.btnOverflow_Click(Object sender, EventArgs e) в C:\Users\nkuby\source\repos\Log\Log\Form1.cs:строка 49
+2024-11-25 08:54:47.1825|ERROR|Log.Form1|Ошибка преобразования строки в число.|System.FormatException: Входная строка имела неверный формат.
+   в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Log.Form1.btnTypeConversion_Click(Object sender, EventArgs e) в C:\Users\nkuby\source\repos\Log\Log\Form1.cs:строка 64
+2024-11-25 08:54:48.6549|ERROR|Log.Form1|Ошибка при записи в файл.|System.IO.DirectoryNotFoundException: Не удалось найти часть пути "C:\Users\nkuby\source\repos\Log\Log\bin\Debug\non_existent_directory\file.txt".
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   в System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   в System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   в System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   в System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   в System.IO.File.WriteAllText(String path, String contents)
+   в Log.Form1.btnFileWrite_Click(Object sender, EventArgs e) в C:\Users\nkuby\source\repos\Log\Log\Form1.cs:строка 78

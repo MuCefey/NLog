@@ -1,0 +1,8 @@
+2024-11-25 08:54:18.4200 Info Registered target NLog.Targets.FileTarget(Name=all_logs_file)
+2024-11-25 08:54:18.4241 Info Registered target NLog.Targets.FileTarget(Name=important_logs_file)
+2024-11-25 08:54:18.4241 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=logconsole)
+2024-11-25 08:54:18.4531 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-11-25 08:54:18.4851 Info Validating config: TargetNames=logconsole, all_logs_file, important_logs_file, ConfigItems=34, FilePath=C:\Users\nkuby\source\repos\Log\Log\bin\Debug\NLog.config
+2024-11-25 08:54:18.5071 Info Configuration initialized.
+2024-11-25 08:54:56.5878 Info AppDomain Shutting down. LogFactory closing...
+2024-11-25 08:54:56.6128 Info LogFactory has been closed.
